@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+
+# Python caches and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Local env and secrets
+.env
+.env.*
+!.env.example
+
+# Local Poetry config (machine-specific)
+poetry.toml
+
+# IDE/editor settings
+.idea/
+.vscode/
