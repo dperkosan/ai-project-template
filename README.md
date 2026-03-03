@@ -18,6 +18,7 @@ Reusable, production-ready baseline template for new AI-focused Python repositor
   - `make lint`
   - `make test`
   - `make run`
+  - `make run-docker`
 - Structured logging conventions with:
   - `LOG_LEVEL`
   - `ENV`
@@ -30,6 +31,7 @@ poetry install
 make lint
 make test
 make run
+make run-docker
 ```
 
 ## Logging Baseline

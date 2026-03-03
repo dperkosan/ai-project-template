@@ -1,4 +1,4 @@
-.PHONY: lint format type-check test run clean
+.PHONY: lint format type-check test run run-docker clean
 
 lint:
 	poetry run ruff check src tests
@@ -14,6 +14,9 @@ test:
 
 run:
 	PYTHONPATH=src poetry run python -m app.main
+
+run-docker:
+	docker compose run --build --rm app
 
 clean:
 	find . -type d -name __pycache__ -exec rm -rf {} +
