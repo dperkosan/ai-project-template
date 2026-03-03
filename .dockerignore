@@ -12,6 +12,7 @@ __pycache__
 .mypy_cache
 .pytest_cache
 .ruff_cache
+.pip-audit-cache
 .coverage
 .coverage.*
 htmlcov

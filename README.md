@@ -16,7 +16,9 @@ Reusable, production-ready baseline template for new AI-focused Python repositor
   - Release workflow
 - Standard developer commands:
   - `make lint`
+  - `make type-check`
   - `make test`
+  - `make audit`
   - `make run`
   - `make run-docker`
 - Structured logging conventions with:
@@ -29,7 +31,9 @@ Reusable, production-ready baseline template for new AI-focused Python repositor
 ```bash
 poetry install
 make lint
+make type-check
 make test
+make audit
 make run
 make run-docker
 ```
@@ -63,10 +67,22 @@ The pipeline must include:
 
 1. `poetry install`
 2. `make lint`
-3. `make test`
-4. Docker image build validation
-5. Dependency vulnerability scan
-6. Release workflow (tag-driven or main-branch gated)
+3. `make type-check`
+4. `make test`
+5. `make audit` (dependency vulnerability scan)
+6. Docker image build validation
+7. Release workflow (tag-driven or main-branch gated)
+
+## Branch Protection Baseline
+
+Configure branch protection for `main` in GitHub repository settings:
+
+1. Require a pull request before merging
+2. Require status checks to pass before merging
+3. Select required check: `quality-and-build`
+4. Require branches to be up to date before merging
+5. Require conversation resolution before merging
+6. Do not allow bypassing the above settings
 
 ## Scalability and Production Readiness
 

@@ -1,4 +1,4 @@
-.PHONY: lint format type-check test run run-docker clean
+.PHONY: lint format type-check test audit run run-docker clean
 
 lint:
 	poetry run ruff check src tests
@@ -11,6 +11,9 @@ type-check:
 
 test:
 	poetry run pytest
+
+audit:
+	poetry run pip-audit --cache-dir .pip-audit-cache
 
 run:
 	PYTHONPATH=src poetry run python -m app.main
