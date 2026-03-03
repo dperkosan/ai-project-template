@@ -1,7 +1,7 @@
 # macOS
 .DS_Store
 
-# Python caches and bytecode
+# Python bytecode/cache
 __pycache__/
 *.py[cod]
 *$py.class
@@ -11,7 +11,7 @@ __pycache__/
 venv/
 env/
 
-# Tool caches
+# Tool caches and test artifacts
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
@@ -19,14 +19,14 @@ env/
 .coverage.*
 htmlcov/
 
-# Build and packaging artifacts
+# Build artifacts
 build/
 dist/
 *.egg-info/
 .eggs/
 pip-wheel-metadata/
 
-# Local env and secrets
+# Local env/secrets
 .env
 .env.*
 !.env.example
@@ -34,6 +34,6 @@ pip-wheel-metadata/
 # Local Poetry config (machine-specific)
 poetry.toml
 
-# IDE/editor settings
+# Editor settings
 .idea/
 .vscode/

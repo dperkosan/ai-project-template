@@ -48,6 +48,13 @@ Environment variables:
 - `LOG_LEVEL`: logging verbosity (`DEBUG`, `INFO`, `WARNING`, `ERROR`)
 - `RUN_ID` (optional): correlation ID for a run; generated automatically if missing
 
+## OpenTelemetry Policy
+
+- OpenTelemetry instrumentation is required in the codebase from day 1.
+- Runtime exporting is disabled by default in local/dev unless explicitly enabled.
+- Exporting is enabled only when telemetry environment configuration is provided (for example `OTEL_EXPORTER_OTLP_ENDPOINT`).
+- Goal: keep first-commit CI simple while keeping production observability wiring ready.
+
 ## CI/CD Baseline (GitHub Actions)
 
 The pipeline must include:
