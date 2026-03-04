@@ -15,6 +15,7 @@ Reusable, production-ready baseline template for new AI-focused Python repositor
   - Dependency vulnerability scan
   - Release workflow
 - Standard developer commands:
+  - `make check`
   - `make lint`
   - `make type-check`
   - `make test`
@@ -30,10 +31,7 @@ Reusable, production-ready baseline template for new AI-focused Python repositor
 
 ```bash
 poetry install
-make lint
-make type-check
-make test
-make audit
+make check
 make run
 make run-docker
 ```
@@ -66,12 +64,9 @@ Environment variables:
 The pipeline must include:
 
 1. `poetry install`
-2. `make lint`
-3. `make type-check`
-4. `make test`
-5. `make audit` (dependency vulnerability scan)
-6. Docker image build validation
-7. Release workflow (tag-driven or main-branch gated)
+2. `make check` (`lint`, `type-check`, `test`, `audit`)
+3. Docker image build validation
+4. Release workflow (tag-driven or main-branch gated)
 
 ## Artifact And Deployment Flow
 
