@@ -73,6 +73,19 @@ The pipeline must include:
 6. Docker image build validation
 7. Release workflow (tag-driven or main-branch gated)
 
+## Artifact And Deployment Flow
+
+- GitHub repository stores source code.
+- CI workflow validates quality and builds a Docker image.
+- GHCR (GitHub Container Registry) stores built Docker images with tags (for example `v0.1.0`).
+- Deployment platforms pull images from GHCR and run them.
+
+Why GHCR is used:
+
+- It gives a central, versioned image registry tied to the repository.
+- It supports a "build once, deploy many" release model.
+- It makes rollbacks easier because older image tags remain available.
+
 ## Branch Protection Baseline
 
 Configure branch protection for `main` in GitHub repository settings:
